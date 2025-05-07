@@ -505,6 +505,7 @@ void machine_etats() {
                 HAL_Delay(5000);
                 etat = DEBUT; // Retourner à l'état DEBUT
             }
+            Hal_Delay(4);
             break;
     }
 }
