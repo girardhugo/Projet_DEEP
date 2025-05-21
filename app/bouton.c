@@ -1,22 +1,42 @@
-/*
- * bouton.c
+/**
+ * @file bouton.c
+ * @brief Implémentation de la gestion des boutons et des trappes.
  *
- *  Created on: May 21, 2025
- *      Author: hugog
+ * Ce fichier contient les définitions des fonctions permettant de gérer
+ * les interactions avec les boutons et les trappes dans le jeu.
+ *
+ * @author hugog
+ * @date May 21, 2025
  */
 
 #include "bouton.h"
 
+/**
+ * @brief État actuel de la trappe sélectionnée.
+ *
+ * Cette variable globale représente la trappe actuellement sélectionnée
+ * par l'utilisateur.
+ */
 etat_trappe_t etat_trappe = TRAPPE1;
 
+/**
+ * @brief Gérer les boutons pour interagir avec les trappes.
+ *
+ * Cette fonction gère les actions des boutons pour :
+ * - Naviguer entre les trappes (boutons gauche et droit).
+ * - Ajouter de l'argent à une trappe (bouton haut).
+ * - Retirer de l'argent d'une trappe (bouton bas).
+ *
+ * @param q La question actuelle, utilisée pour mettre à jour les réponses affichées.
+ */
 void gerer_boutons(Question q) {
-    static uint32_t dernier_temps_haut = 0; // Dernier temps où le bouton haut a été traité
-    static uint32_t dernier_temps_bas = 0;  // Dernier temps où le bouton bas a été traité
+    static uint32_t dernier_temps_haut = 0; /**< Dernier temps où le bouton haut a été traité. */
+    static uint32_t dernier_temps_bas = 0;  /**< Dernier temps où le bouton bas a été traité. */
 
-    uint8_t bouton_droit = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1);
-    uint8_t bouton_gauche = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_9);
-    uint8_t bouton_haut = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0);
-    uint8_t bouton_bas = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_10);
+    uint8_t bouton_droit = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1); /**< État du bouton droit. */
+    uint8_t bouton_gauche = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_9); /**< État du bouton gauche. */
+    uint8_t bouton_haut = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0); /**< État du bouton haut. */
+    uint8_t bouton_bas = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_10); /**< État du bouton bas. */
 
     // Gestion du bouton droit
     if (bouton_droit == 0 && bouton_droit_prec == 1) {

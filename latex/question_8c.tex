@@ -1,0 +1,116 @@
+\doxysection{app/question.c File Reference}
+\hypertarget{question_8c}{}\label{question_8c}\index{app/question.c@{app/question.c}}
+
+
+Implémentation des fonctions liées aux questions.  
+
+
+{\ttfamily \#include "{}question.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_question}{Question}} \mbox{\hyperlink{question_8c_a9d500cce1081e29e3de9cb617a8ce639}{obtenir\+\_\+question\+\_\+suivante}} (void)
+\begin{DoxyCompactList}\small\item\em Obtenir la prochaine question non posée. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_question}{Question}} \mbox{\hyperlink{question_8c_af5521119514d4d7585d63bf2c5c79362}{questions}} \mbox{[}25\mbox{]}
+\begin{DoxyCompactList}\small\item\em Liste des questions disponibles dans le jeu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{question_8c_aea79b0748e8cca9a9e4c12762125744d}{questions\+\_\+posees}} \mbox{[}20\mbox{]} = \{false\}
+\begin{DoxyCompactList}\small\item\em Tableau pour suivre les questions déjà posées. \end{DoxyCompactList}\item 
+\Hypertarget{question_8c_a657ecf60462c5a3fa49235469ec73ee1}\label{question_8c_a657ecf60462c5a3fa49235469ec73ee1} 
+int {\bfseries compteur\+\_\+questions} = 0
+\begin{DoxyCompactList}\small\item\em Compteur pour suivre le nombre de questions posées. \end{DoxyCompactList}\item 
+\Hypertarget{question_8c_ad44a109da7e991956778b99af7fc4f5a}\label{question_8c_ad44a109da7e991956778b99af7fc4f5a} 
+int {\bfseries numero\+\_\+question} = 1
+\begin{DoxyCompactList}\small\item\em Numéro de la question actuelle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implémentation des fonctions liées aux questions. 
+
+Ce fichier contient les définitions des fonctions permettant de gérer les questions dans le jeu, ainsi que la liste des questions disponibles.
+
+\begin{DoxyAuthor}{Author}
+hugog 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+May 21, 2025 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{question_8c_a9d500cce1081e29e3de9cb617a8ce639}\index{question.c@{question.c}!obtenir\_question\_suivante@{obtenir\_question\_suivante}}
+\index{obtenir\_question\_suivante@{obtenir\_question\_suivante}!question.c@{question.c}}
+\doxysubsubsection{\texorpdfstring{obtenir\_question\_suivante()}{obtenir\_question\_suivante()}}
+{\footnotesize\ttfamily \label{question_8c_a9d500cce1081e29e3de9cb617a8ce639} 
+\mbox{\hyperlink{struct_question}{Question}} obtenir\+\_\+question\+\_\+suivante (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Obtenir la prochaine question non posée. 
+
+Cette fonction sélectionne une question aléatoire parmi celles qui n\textquotesingle{}ont pas encore été posées. Si toutes les questions ont été posées, elle retourne une question vide.
+
+\begin{DoxyReturn}{Returns}
+La prochaine question ou une question vide si toutes les questions ont été posées. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{question_8c_af5521119514d4d7585d63bf2c5c79362}\index{question.c@{question.c}!questions@{questions}}
+\index{questions@{questions}!question.c@{question.c}}
+\doxysubsubsection{\texorpdfstring{questions}{questions}}
+{\footnotesize\ttfamily \label{question_8c_af5521119514d4d7585d63bf2c5c79362} 
+\mbox{\hyperlink{struct_question}{Question}} questions\mbox{[}25\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Quel\ est\ le\ plus\ grand\ desert\ ?"{}},\ \{\textcolor{stringliteral}{"{}Sahara"{}},\ \textcolor{stringliteral}{"{}Gobi"{}},\ \textcolor{stringliteral}{"{}Atacama"{}}\},\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Quelle\ est\ la\ capitale\ de\ l'Allemagne\ ?"{}},\ \{\textcolor{stringliteral}{"{}Munich"{}},\ \textcolor{stringliteral}{"{}Berlin"{}},\ \textcolor{stringliteral}{"{}Hambourg"{}}\},\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Combien\ fait\ 7x8\ ?"{}},\ \{\textcolor{stringliteral}{"{}49"{}},\ \textcolor{stringliteral}{"{}64"{}},\ \textcolor{stringliteral}{"{}56"{}}\},\ 2\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Qui\ a\ peint\ la\ Joconde\ ?"{}},\ \{\textcolor{stringliteral}{"{}Leonard"{}},\ \textcolor{stringliteral}{"{}Michel"{}},\ \textcolor{stringliteral}{"{}Raphael"{}}\},\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Quelle\ est\ la\ couleur\ du\ sang\ dans\ les\ veines\ ?"{}},\ \{\textcolor{stringliteral}{"{}Bleu"{}},\ \textcolor{stringliteral}{"{}Rouge"{}},\ \textcolor{stringliteral}{"{}Violet"{}}\},\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Quel\ sport\ se\ joue\ avec\ une\ batte\ ?"{}},\ \{\textcolor{stringliteral}{"{}Golf"{}},\ \textcolor{stringliteral}{"{}Cricket"{}},\ \textcolor{stringliteral}{"{}Baseball"{}}\},\ 2\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Qui\ a\ peint\ 'La\ Nuit\ etoilee'\ ?"{}},\ \{\textcolor{stringliteral}{"{}Van\ Gogh"{}},\ \textcolor{stringliteral}{"{}Monet"{}},\ \textcolor{stringliteral}{"{}Picasso"{}}\},\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Combien\ d’ailes\ a\ un\ papillon\ ?"{}},\ \{\textcolor{stringliteral}{"{}6"{}},\ \textcolor{stringliteral}{"{}2"{}},\ \textcolor{stringliteral}{"{}4"{}}\},\ 2\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Quelle\ planete\ est\ surnommee\ 'l'etoile\ du\ berger'\ ?"{}},\ \{\textcolor{stringliteral}{"{}Mars"{}},\ \textcolor{stringliteral}{"{}Mercure"{}},\ \textcolor{stringliteral}{"{}Venus"{}}\},\ 2\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Quelle\ matiere\ est\ liquide\ a\ temperature\ ambiante\ ?"{}},\ \{\textcolor{stringliteral}{"{}Fer"{}},\ \textcolor{stringliteral}{"{}Cuivre"{}},\ \textcolor{stringliteral}{"{}Eau"{}}\},\ 2\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Quelle\ est\ la\ valeur\ de\ pi\ ?"{}},\ \{\textcolor{stringliteral}{"{}3,15"{}},\ \textcolor{stringliteral}{"{}3,14"{}},\ \textcolor{stringliteral}{"{}3,16"{}}\},\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Quel\ est\ le\ nom\ de\ l’alphabet\ grec\ ?"{}},\ \{\textcolor{stringliteral}{"{}Gamma"{}},\ \textcolor{stringliteral}{"{}Alpha"{}},\ \textcolor{stringliteral}{"{}Omega"{}}\},\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Qui\ dirige\ un\ orchestre\ ?"{}},\ \{\textcolor{stringliteral}{"{}Chef"{}},\ \textcolor{stringliteral}{"{}Soliste"{}},\ \textcolor{stringliteral}{"{}Pianiste"{}}\},\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Combien\ d'annees\ dans\ un\ siecle\ ?"{}},\ \{\textcolor{stringliteral}{"{}1000"{}},\ \textcolor{stringliteral}{"{}10"{}},\ \textcolor{stringliteral}{"{}100"{}}\},\ 2\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Quel\ est\ le\ symbole\ de\ la\ paix\ ?"{}},\ \{\textcolor{stringliteral}{"{}Etoile"{}},\ \textcolor{stringliteral}{"{}Colombe"{}},\ \textcolor{stringliteral}{"{}Rose"{}}\},\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Quelle\ est\ la\ monnaie\ utilisee\ aux\ Etats-\/Unis\ ?"{}},\ \{\textcolor{stringliteral}{"{}Euro"{}},\ \textcolor{stringliteral}{"{}Livre"{}},\ \textcolor{stringliteral}{"{}Dollar"{}}\},\ 2\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Quel\ pays\ est\ connu\ pour\ les\ pyramides\ ?"{}},\ \{\textcolor{stringliteral}{"{}Inde"{}},\ \textcolor{stringliteral}{"{}Mexique"{}},\ \textcolor{stringliteral}{"{}Egypte"{}}\},\ 2\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Qui\ a\ decouvert\ l'Amerique\ ?"{}},\ \{\textcolor{stringliteral}{"{}Magellan"{}},\ \textcolor{stringliteral}{"{}Colomb"{}},\ \textcolor{stringliteral}{"{}Cook"{}}\},\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Quelle\ est\ la\ capitale\ de\ la\ Russie\ ?"{}},\ \{\textcolor{stringliteral}{"{}Kiev"{}},\ \textcolor{stringliteral}{"{}Moscou"{}},\ \textcolor{stringliteral}{"{}Pekin"{}}\},\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Quelle\ est\ la\ vitesse\ de\ la\ lumiere\ (km/s)?"{}},\ \{\textcolor{stringliteral}{"{}290\ 000"{}},\ \textcolor{stringliteral}{"{}299\ 792"{}},\ \textcolor{stringliteral}{"{}300\ 000"{}}\},\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Quel\ metal\ est\ le\ plus\ leger\ ?"{}},\ \{\textcolor{stringliteral}{"{}Argent"{}},\ \textcolor{stringliteral}{"{}Cuivre"{}},\ \textcolor{stringliteral}{"{}Aluminium"{}}\},\ 2\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Quelle\ galaxie\ contient\ notre\ systeme\ solaire\ ?"{}},\ \{\textcolor{stringliteral}{"{}Centaur"{}},\ \textcolor{stringliteral}{"{}Voie\ Lactee"{}},\ \textcolor{stringliteral}{"{}Andromede"{}}\},\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Qui\ a\ ecrit\ 'L'Odyssee'\ ?"{}},\ \{\textcolor{stringliteral}{"{}Homere"{}},\ \textcolor{stringliteral}{"{}Sophocle"{}},\ \textcolor{stringliteral}{"{}Virgile"{}}\},\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Combien\ de\ cordes\ a\ un\ violon\ ?"{}},\ \{\textcolor{stringliteral}{"{}6"{}},\ \textcolor{stringliteral}{"{}4"{}},\ \textcolor{stringliteral}{"{}5"{}}\},\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}Quel\ est\ le\ point\ de\ congelation\ de\ l'eau\ en\ degres\ C\ ?"{}},\ \{\textcolor{stringliteral}{"{}0"{}},\ \textcolor{stringliteral}{"{}-\/1"{}},\ \textcolor{stringliteral}{"{}-\/5"{}}\},\ 0\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Liste des questions disponibles dans le jeu. 
+
+Liste des questions disponibles.
+
+Chaque question est composée d\textquotesingle{}un texte, de trois réponses possibles, et de l\textquotesingle{}index de la bonne réponse (0, 1 ou 2). \Hypertarget{question_8c_aea79b0748e8cca9a9e4c12762125744d}\index{question.c@{question.c}!questions\_posees@{questions\_posees}}
+\index{questions\_posees@{questions\_posees}!question.c@{question.c}}
+\doxysubsubsection{\texorpdfstring{questions\_posees}{questions\_posees}}
+{\footnotesize\ttfamily \label{question_8c_aea79b0748e8cca9a9e4c12762125744d} 
+bool questions\+\_\+posees\mbox{[}20\mbox{]} = \{false\}}
+
+
+
+Tableau pour suivre les questions déjà posées. 
+
+Tableau pour suivre les questions posées.
+
+Chaque élément du tableau est un booléen indiquant si la question correspondante a déjà été posée ({\ttfamily true}) ou non ({\ttfamily false}). 

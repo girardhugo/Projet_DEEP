@@ -1,0 +1,116 @@
+\doxysection{app/argent.c File Reference}
+\hypertarget{argent_8c}{}\label{argent_8c}\index{app/argent.c@{app/argent.c}}
+
+
+Implémentation des fonctions de gestion de l\textquotesingle{}argent dans le jeu.  
+
+
+{\ttfamily \#include "{}argent.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{argent_8c_abf4055cb128bc8cb096f692a6cfd6616}{tout\+\_\+argent\+\_\+place}} (void)
+\begin{DoxyCompactList}\small\item\em Vérifie si tout l\textquotesingle{}argent a été placé. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{argent_8c_ace3456fa7a9035012a05ee84b5b18536}{valider\+\_\+reponses}} (\mbox{\hyperlink{struct_question}{Question}} q)
+\begin{DoxyCompactList}\small\item\em Valide les réponses pour une question donnée. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{argent_8c_a9b2f0dbdfed7fa2890c83dfc9185e0bf}{calculer\+\_\+argent\+\_\+restant}} (\mbox{\hyperlink{struct_question}{Question}} q)
+\begin{DoxyCompactList}\small\item\em Calcule l\textquotesingle{}argent restant après validation des réponses. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{argent_8c_a1f12474a1e7dad80ef0df65f38aa687a}\label{argent_8c_a1f12474a1e7dad80ef0df65f38aa687a} 
+int {\bfseries argent\+\_\+place} = 0
+\begin{DoxyCompactList}\small\item\em Somme d\textquotesingle{}argent actuellement placée sur les trappes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{argent_8c_a59ac683c736d47183e4f1eee4e68e0f7}{argent\+\_\+trappes}} \mbox{[}3\mbox{]} = \{0, 0, 0\}
+\begin{DoxyCompactList}\small\item\em Argent placé sur chaque trappe. \end{DoxyCompactList}\item 
+\Hypertarget{argent_8c_a5bdeb9c5dea6bcf719114b9fd97f44d7}\label{argent_8c_a5bdeb9c5dea6bcf719114b9fd97f44d7} 
+int {\bfseries argent\+\_\+total} = 150000
+\begin{DoxyCompactList}\small\item\em Somme totale d\textquotesingle{}argent restante. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implémentation des fonctions de gestion de l\textquotesingle{}argent dans le jeu. 
+
+Ce fichier contient les définitions des fonctions permettant de gérer l\textquotesingle{}argent dans le jeu, y compris le placement, la validation des réponses et le calcul de l\textquotesingle{}argent restant.
+
+\begin{DoxyAuthor}{Author}
+hugog 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+May 21, 2025 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{argent_8c_a9b2f0dbdfed7fa2890c83dfc9185e0bf}\index{argent.c@{argent.c}!calculer\_argent\_restant@{calculer\_argent\_restant}}
+\index{calculer\_argent\_restant@{calculer\_argent\_restant}!argent.c@{argent.c}}
+\doxysubsubsection{\texorpdfstring{calculer\_argent\_restant()}{calculer\_argent\_restant()}}
+{\footnotesize\ttfamily \label{argent_8c_a9b2f0dbdfed7fa2890c83dfc9185e0bf} 
+int calculer\+\_\+argent\+\_\+restant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_question}{Question}}}]{q}{}\end{DoxyParamCaption})}
+
+
+
+Calcule l\textquotesingle{}argent restant après validation des réponses. 
+
+Cette fonction retourne la somme d\textquotesingle{}argent placée sur la trappe correspondant à la bonne réponse pour une question donnée.
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & La question actuelle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La somme d\textquotesingle{}argent restante sur la bonne trappe. 
+\end{DoxyReturn}
+\Hypertarget{argent_8c_abf4055cb128bc8cb096f692a6cfd6616}\index{argent.c@{argent.c}!tout\_argent\_place@{tout\_argent\_place}}
+\index{tout\_argent\_place@{tout\_argent\_place}!argent.c@{argent.c}}
+\doxysubsubsection{\texorpdfstring{tout\_argent\_place()}{tout\_argent\_place()}}
+{\footnotesize\ttfamily \label{argent_8c_abf4055cb128bc8cb096f692a6cfd6616} 
+int tout\+\_\+argent\+\_\+place (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Vérifie si tout l\textquotesingle{}argent a été placé. 
+
+Cette fonction vérifie si la totalité de l\textquotesingle{}argent disponible a été placée sur les trappes.
+
+\begin{DoxyReturn}{Returns}
+1 si tout l\textquotesingle{}argent est placé, 0 sinon. 
+\end{DoxyReturn}
+\Hypertarget{argent_8c_ace3456fa7a9035012a05ee84b5b18536}\index{argent.c@{argent.c}!valider\_reponses@{valider\_reponses}}
+\index{valider\_reponses@{valider\_reponses}!argent.c@{argent.c}}
+\doxysubsubsection{\texorpdfstring{valider\_reponses()}{valider\_reponses()}}
+{\footnotesize\ttfamily \label{argent_8c_ace3456fa7a9035012a05ee84b5b18536} 
+void valider\+\_\+reponses (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_question}{Question}}}]{q}{}\end{DoxyParamCaption})}
+
+
+
+Valide les réponses pour une question donnée. 
+
+Cette fonction compare les réponses placées sur les trappes avec la bonne réponse pour une question donnée. Elle met à jour l\textquotesingle{}affichage des trappes en colorant la bonne trappe en vert et les autres en noir.
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & La question actuelle. \\
+\hline
+\end{DoxyParams}
+\texorpdfstring{$<$}{<} Coordonnée X de début pour la trappe.
+
+\texorpdfstring{$<$}{<} Coordonnée X de fin pour la trappe.
+
+\texorpdfstring{$<$}{<} Colorer la bonne trappe en vert.
+
+\texorpdfstring{$<$}{<} Colorer les autres trappes en noir.
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{argent_8c_a59ac683c736d47183e4f1eee4e68e0f7}\index{argent.c@{argent.c}!argent\_trappes@{argent\_trappes}}
+\index{argent\_trappes@{argent\_trappes}!argent.c@{argent.c}}
+\doxysubsubsection{\texorpdfstring{argent\_trappes}{argent\_trappes}}
+{\footnotesize\ttfamily \label{argent_8c_a59ac683c736d47183e4f1eee4e68e0f7} 
+int argent\+\_\+trappes\mbox{[}3\mbox{]} = \{0, 0, 0\}}
+
+
+
+Argent placé sur chaque trappe. 
+
+Ce tableau contient la somme d\textquotesingle{}argent placée sur chacune des trois trappes. 

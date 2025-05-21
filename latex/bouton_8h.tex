@@ -1,0 +1,124 @@
+\doxysection{app/bouton.h File Reference}
+\hypertarget{bouton_8h}{}\label{bouton_8h}\index{app/bouton.h@{app/bouton.h}}
+
+
+Gestion des boutons et des trappes.  
+
+
+{\ttfamily \#include "{}question.\+h"{}}\newline
+{\ttfamily \#include "{}argent.\+h"{}}\newline
+{\ttfamily \#include "{}affichage.\+h"{}}\newline
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{bouton_8h_a7ff7ac3b35ac020daa382602b88401e0}{etat\+\_\+trappe\+\_\+t}} \{ \mbox{\hyperlink{bouton_8h_a7ff7ac3b35ac020daa382602b88401e0a45aa8fb4fd9176c0df998f9fa5b497f9}{TRAPPE1}} = 0
+, \mbox{\hyperlink{bouton_8h_a7ff7ac3b35ac020daa382602b88401e0a1e8c64e17360dd799ac6580714fd10dd}{TRAPPE2}}
+, \mbox{\hyperlink{bouton_8h_a7ff7ac3b35ac020daa382602b88401e0abb68906e2ad2bc854f450b5fd6cfbad7}{TRAPPE3}}
+ \}
+\begin{DoxyCompactList}\small\item\em États des trappes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{bouton_8h_abfde14adcaae9c447f56348bdcae8aae}{gerer\+\_\+boutons}} (\mbox{\hyperlink{struct_question}{Question}} q)
+\begin{DoxyCompactList}\small\item\em Gérer les boutons pour interagir avec les trappes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{bouton_8h_a7ff7ac3b35ac020daa382602b88401e0}{etat\+\_\+trappe\+\_\+t}} \mbox{\hyperlink{bouton_8h_a75d40edd9dc648cc83b8b4c9217a3752}{etat\+\_\+trappe}}
+\begin{DoxyCompactList}\small\item\em État actuel de la trappe sélectionnée. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gestion des boutons et des trappes. 
+
+Ce fichier contient les déclarations des structures, variables et fonctions utilisées pour gérer les boutons et les trappes dans le jeu.
+
+\begin{DoxyAuthor}{Author}
+hugog 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+May 21, 2025 
+\end{DoxyDate}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{bouton_8h_a7ff7ac3b35ac020daa382602b88401e0}\index{bouton.h@{bouton.h}!etat\_trappe\_t@{etat\_trappe\_t}}
+\index{etat\_trappe\_t@{etat\_trappe\_t}!bouton.h@{bouton.h}}
+\doxysubsubsection{\texorpdfstring{etat\_trappe\_t}{etat\_trappe\_t}}
+{\footnotesize\ttfamily \label{bouton_8h_a7ff7ac3b35ac020daa382602b88401e0} 
+enum \mbox{\hyperlink{bouton_8h_a7ff7ac3b35ac020daa382602b88401e0}{etat\+\_\+trappe\+\_\+t}}}
+
+
+
+États des trappes. 
+
+Cette énumération représente les différentes trappes disponibles dans le jeu. \begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRAPPE1@{TRAPPE1}!bouton.h@{bouton.h}}\index{bouton.h@{bouton.h}!TRAPPE1@{TRAPPE1}}}\Hypertarget{bouton_8h_a7ff7ac3b35ac020daa382602b88401e0a45aa8fb4fd9176c0df998f9fa5b497f9}\label{bouton_8h_a7ff7ac3b35ac020daa382602b88401e0a45aa8fb4fd9176c0df998f9fa5b497f9} 
+TRAPPE1&Trappe 1. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRAPPE2@{TRAPPE2}!bouton.h@{bouton.h}}\index{bouton.h@{bouton.h}!TRAPPE2@{TRAPPE2}}}\Hypertarget{bouton_8h_a7ff7ac3b35ac020daa382602b88401e0a1e8c64e17360dd799ac6580714fd10dd}\label{bouton_8h_a7ff7ac3b35ac020daa382602b88401e0a1e8c64e17360dd799ac6580714fd10dd} 
+TRAPPE2&Trappe 2. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRAPPE3@{TRAPPE3}!bouton.h@{bouton.h}}\index{bouton.h@{bouton.h}!TRAPPE3@{TRAPPE3}}}\Hypertarget{bouton_8h_a7ff7ac3b35ac020daa382602b88401e0abb68906e2ad2bc854f450b5fd6cfbad7}\label{bouton_8h_a7ff7ac3b35ac020daa382602b88401e0abb68906e2ad2bc854f450b5fd6cfbad7} 
+TRAPPE3&Trappe 3. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{bouton_8h_abfde14adcaae9c447f56348bdcae8aae}\index{bouton.h@{bouton.h}!gerer\_boutons@{gerer\_boutons}}
+\index{gerer\_boutons@{gerer\_boutons}!bouton.h@{bouton.h}}
+\doxysubsubsection{\texorpdfstring{gerer\_boutons()}{gerer\_boutons()}}
+{\footnotesize\ttfamily \label{bouton_8h_abfde14adcaae9c447f56348bdcae8aae} 
+void gerer\+\_\+boutons (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_question}{Question}}}]{q}{}\end{DoxyParamCaption})}
+
+
+
+Gérer les boutons pour interagir avec les trappes. 
+
+Cette fonction permet de gérer les actions des boutons pour placer ou retirer de l\textquotesingle{}argent sur les trappes en fonction de la question en cours.
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & La question actuelle.\\
+\hline
+\end{DoxyParams}
+Cette fonction gère les actions des boutons pour \+:
+\begin{DoxyItemize}
+\item Naviguer entre les trappes (boutons gauche et droit).
+\item Ajouter de l\textquotesingle{}argent à une trappe (bouton haut).
+\item Retirer de l\textquotesingle{}argent d\textquotesingle{}une trappe (bouton bas).
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & La question actuelle, utilisée pour mettre à jour les réponses affichées. \\
+\hline
+\end{DoxyParams}
+\texorpdfstring{$<$}{<} Dernier temps où le bouton haut a été traité.
+
+\texorpdfstring{$<$}{<} Dernier temps où le bouton bas a été traité.
+
+\texorpdfstring{$<$}{<} État du bouton droit.
+
+\texorpdfstring{$<$}{<} État du bouton gauche.
+
+\texorpdfstring{$<$}{<} État du bouton haut.
+
+\texorpdfstring{$<$}{<} État du bouton bas.
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{bouton_8h_a75d40edd9dc648cc83b8b4c9217a3752}\index{bouton.h@{bouton.h}!etat\_trappe@{etat\_trappe}}
+\index{etat\_trappe@{etat\_trappe}!bouton.h@{bouton.h}}
+\doxysubsubsection{\texorpdfstring{etat\_trappe}{etat\_trappe}}
+{\footnotesize\ttfamily \label{bouton_8h_a75d40edd9dc648cc83b8b4c9217a3752} 
+\mbox{\hyperlink{bouton_8h_a7ff7ac3b35ac020daa382602b88401e0}{etat\+\_\+trappe\+\_\+t}} etat\+\_\+trappe\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+État actuel de la trappe sélectionnée. 
+
+Cette variable globale représente la trappe actuellement sélectionnée par l\textquotesingle{}utilisateur. 

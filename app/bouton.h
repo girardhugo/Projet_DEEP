@@ -1,33 +1,45 @@
-/*
- * bouton.h
+/**
+ * @file bouton.h
+ * @brief Gestion des boutons et des trappes.
  *
- *  Created on: May 21, 2025
- *      Author: hugog
+ * Ce fichier contient les déclarations des structures, variables et fonctions
+ * utilisées pour gérer les boutons et les trappes dans le jeu.
+ *
+ * @author hugog
+ * @date May 21, 2025
  */
+
+#ifndef BOUTON_H_
+#define BOUTON_H_
 
 #include "question.h"
 #include "argent.h"
 #include "affichage.h"
 
-#ifndef BOUTON_H_
-#define BOUTON_H_
-
-// États des trappes
+/**
+ * @brief États des trappes.
+ *
+ * Cette énumération représente les différentes trappes disponibles dans le jeu.
+ */
 typedef enum {
-    TRAPPE1 = 0,
-    TRAPPE2,
-    TRAPPE3
+    TRAPPE1 = 0, /**< Trappe 1. */
+    TRAPPE2,     /**< Trappe 2. */
+    TRAPPE3      /**< Trappe 3. */
 } etat_trappe_t;
 
-// Variables globales
+/**
+ * @brief État actuel de la trappe sélectionnée.
+ */
 extern etat_trappe_t etat_trappe;
 
-// Variables pour stocker l'état précédent des boutons
-static uint8_t bouton_droit_prec = 1;
-static uint8_t bouton_gauche_prec = 1;
-static uint8_t bouton_haut_prec = 1;
-static uint8_t bouton_bas_prec = 1;
-
+/**
+ * @brief Gérer les boutons pour interagir avec les trappes.
+ *
+ * Cette fonction permet de gérer les actions des boutons pour placer ou retirer
+ * de l'argent sur les trappes en fonction de la question en cours.
+ *
+ * @param q La question actuelle.
+ */
 void gerer_boutons(Question q);
 
 #endif /* BOUTON_H_ */

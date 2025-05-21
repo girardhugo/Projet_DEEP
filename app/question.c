@@ -1,13 +1,22 @@
-/*
- * question.c
+/**
+ * @file question.c
+ * @brief Implémentation des fonctions liées aux questions.
  *
- *  Created on: May 21, 2025
- *      Author: hugog
+ * Ce fichier contient les définitions des fonctions permettant de gérer
+ * les questions dans le jeu, ainsi que la liste des questions disponibles.
+ *
+ * @author hugog
+ * @date May 21, 2025
  */
 
 #include "question.h"
 
-// Liste des questions
+/**
+ * @brief Liste des questions disponibles dans le jeu.
+ *
+ * Chaque question est composée d'un texte, de trois réponses possibles,
+ * et de l'index de la bonne réponse (0, 1 ou 2).
+ */
 Question questions[25] = {
     {"Quel est le plus grand desert ?", {"Sahara", "Gobi", "Atacama"}, 0},
     {"Quelle est la capitale de l'Allemagne ?", {"Munich", "Berlin", "Hambourg"}, 1},
@@ -36,11 +45,32 @@ Question questions[25] = {
     {"Quel est le point de congelation de l'eau en degres C ?", {"0", "-1", "-5"}, 0},
 };
 
-bool questions_posees[20] = {false}; // Définition
+/**
+ * @brief Tableau pour suivre les questions déjà posées.
+ *
+ * Chaque élément du tableau est un booléen indiquant si la question
+ * correspondante a déjà été posée (`true`) ou non (`false`).
+ */
+bool questions_posees[20] = {false};
+
+/**
+ * @brief Compteur pour suivre le nombre de questions posées.
+ */
 int compteur_questions = 0;
+
+/**
+ * @brief Numéro de la question actuelle.
+ */
 int numero_question = 1;
 
-// Obtenir la prochaine question
+/**
+ * @brief Obtenir la prochaine question non posée.
+ *
+ * Cette fonction sélectionne une question aléatoire parmi celles qui n'ont pas encore été posées.
+ * Si toutes les questions ont été posées, elle retourne une question vide.
+ *
+ * @return La prochaine question ou une question vide si toutes les questions ont été posées.
+ */
 Question obtenir_question_suivante(void) {
     int questions_restantes = 0;
 

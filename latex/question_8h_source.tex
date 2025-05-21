@@ -1,0 +1,41 @@
+\doxysection{question.\+h}
+\hypertarget{question_8h_source}{}\label{question_8h_source}\index{app/question.h@{app/question.h}}
+\mbox{\hyperlink{question_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ QUESTION\_H\_}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ QUESTION\_H\_}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{config_8h}{config.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}stm32g4\_sys.h"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}stm32g4\_systick.h"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}stm32g4\_gpio.h"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}stm32g4\_uart.h"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}stm32g4\_utils.h"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}stm32g4xx\_hal.h"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}tft\_ili9341/stm32g4\_ili9341.h"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}tft\_ili9341/stm32g4\_fonts.h"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}stm32g4xx\_hal\_gpio.h"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{question_8c_aea79b0748e8cca9a9e4c12762125744d}{questions\_posees}}[20];}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{question_8c_a657ecf60462c5a3fa49235469ec73ee1}{compteur\_questions}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{question_8c_ad44a109da7e991956778b99af7fc4f5a}{numero\_question}};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_question_a83e14f1f385800da5c15736896d8f61f}{question}}[256];\ \ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_question_aa7800b380a9242980de2870f26527bba}{reponses}}[3][256];\ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_question_a59acc904f253498f2237e27e74bd01c5}{bonne\_reponse}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \}\ \mbox{\hyperlink{struct_question}{Question}};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_question}{Question}}\ \mbox{\hyperlink{question_8c_af5521119514d4d7585d63bf2c5c79362}{questions}}[25];}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00073\ \mbox{\hyperlink{struct_question}{Question}}\ \mbox{\hyperlink{question_8h_a9d500cce1081e29e3de9cb617a8ce639}{obtenir\_question\_suivante}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ QUESTION\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

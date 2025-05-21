@@ -1,0 +1,115 @@
+\doxysection{app/affichage.c File Reference}
+\hypertarget{affichage_8c}{}\label{affichage_8c}\index{app/affichage.c@{app/affichage.c}}
+
+
+Implémentation des fonctions d\textquotesingle{}affichage pour le jeu.  
+
+
+{\ttfamily \#include "{}affichage.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}bouton.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{affichage_8c_ad888747910c2121586a5ff26c519ddef}\label{affichage_8c_ad888747910c2121586a5ff26c519ddef} 
+void {\bfseries afficher\+\_\+argent\+\_\+total} (void)
+\begin{DoxyCompactList}\small\item\em Affiche la somme totale d\textquotesingle{}argent restante. \end{DoxyCompactList}\item 
+\Hypertarget{affichage_8c_a429bcb19bfccfe698c58140e50356e30}\label{affichage_8c_a429bcb19bfccfe698c58140e50356e30} 
+void {\bfseries afficher\+\_\+argent\+\_\+trappes} (void)
+\begin{DoxyCompactList}\small\item\em Affiche la somme d\textquotesingle{}argent placée sur chaque trappe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{affichage_8c_aa218443c8ceb03cad03ea67cfcc2b917}{afficher\+\_\+argent\+\_\+restant}} (int argent\+\_\+restant)
+\begin{DoxyCompactList}\small\item\em Affiche la somme d\textquotesingle{}argent restante après validation des réponses. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{affichage_8c_a3fc4279fd17641c78ff108615503b9e2}{afficher\+\_\+question}} (\mbox{\hyperlink{struct_question}{Question}} q)
+\begin{DoxyCompactList}\small\item\em Affiche la question actuelle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{affichage_8c_a3d86abb8eb253597fa942dc7d9c48d9c}{afficher\+\_\+reponses}} (\mbox{\hyperlink{struct_question}{Question}} q)
+\begin{DoxyCompactList}\small\item\em Affiche les réponses possibles pour la question actuelle. \end{DoxyCompactList}\item 
+\Hypertarget{affichage_8c_ada37e51f36901473dee387347e4db3bd}\label{affichage_8c_ada37e51f36901473dee387347e4db3bd} 
+void {\bfseries afficher\+\_\+ecran\+\_\+perdu} (void)
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}écran "{}\+PERDU"{} lorsque le joueur perd la partie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{affichage_8c_ac5684454245809d89cb2dfb5e35e494a}{afficher\+\_\+ecran\+\_\+fin}} (int \mbox{\hyperlink{argent_8c_a5bdeb9c5dea6bcf719114b9fd97f44d7}{argent\+\_\+total}})
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}écran de fin lorsque le joueur termine la partie. \end{DoxyCompactList}\item 
+\Hypertarget{affichage_8c_a5e48ca725fd13e456609b79feed44cb2}\label{affichage_8c_a5e48ca725fd13e456609b79feed44cb2} 
+void {\bfseries afficher\+\_\+ecran\+\_\+debut} (void)
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}écran de début du jeu. \end{DoxyCompactList}\item 
+\Hypertarget{affichage_8c_a1eee2d3690fdf795009549bea626b6bd}\label{affichage_8c_a1eee2d3690fdf795009549bea626b6bd} 
+void {\bfseries afficher\+\_\+ecran\+\_\+regles} (void)
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}écran des règles du jeu. \end{DoxyCompactList}\item 
+\Hypertarget{affichage_8c_a106c5733002b45b87a8465a4adedffeb}\label{affichage_8c_a106c5733002b45b87a8465a4adedffeb} 
+void {\bfseries mettre\+\_\+a\+\_\+jour\+\_\+couleurs\+\_\+trappes} ()
+\begin{DoxyCompactList}\small\item\em Met à jour les couleurs des trappes en fonction de leur état. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implémentation des fonctions d\textquotesingle{}affichage pour le jeu. 
+
+Ce fichier contient les définitions des fonctions permettant de gérer l\textquotesingle{}affichage des différentes informations et écrans du jeu, y compris l\textquotesingle{}argent, les questions, les réponses, et les écrans de début, de fin, et de règles.
+
+\begin{DoxyAuthor}{Author}
+hugog 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+May 21, 2025 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{affichage_8c_aa218443c8ceb03cad03ea67cfcc2b917}\index{affichage.c@{affichage.c}!afficher\_argent\_restant@{afficher\_argent\_restant}}
+\index{afficher\_argent\_restant@{afficher\_argent\_restant}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{afficher\_argent\_restant()}{afficher\_argent\_restant()}}
+{\footnotesize\ttfamily \label{affichage_8c_aa218443c8ceb03cad03ea67cfcc2b917} 
+void afficher\+\_\+argent\+\_\+restant (\begin{DoxyParamCaption}\item[{int}]{argent\+\_\+restant}{}\end{DoxyParamCaption})}
+
+
+
+Affiche la somme d\textquotesingle{}argent restante après validation des réponses. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argent\+\_\+restant} & La somme d\textquotesingle{}argent restante. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{affichage_8c_ac5684454245809d89cb2dfb5e35e494a}\index{affichage.c@{affichage.c}!afficher\_ecran\_fin@{afficher\_ecran\_fin}}
+\index{afficher\_ecran\_fin@{afficher\_ecran\_fin}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{afficher\_ecran\_fin()}{afficher\_ecran\_fin()}}
+{\footnotesize\ttfamily \label{affichage_8c_ac5684454245809d89cb2dfb5e35e494a} 
+void afficher\+\_\+ecran\+\_\+fin (\begin{DoxyParamCaption}\item[{int}]{argent\+\_\+total}{}\end{DoxyParamCaption})}
+
+
+
+Affiche l\textquotesingle{}écran de fin lorsque le joueur termine la partie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argent\+\_\+total} & La somme totale d\textquotesingle{}argent restante. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{affichage_8c_a3fc4279fd17641c78ff108615503b9e2}\index{affichage.c@{affichage.c}!afficher\_question@{afficher\_question}}
+\index{afficher\_question@{afficher\_question}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{afficher\_question()}{afficher\_question()}}
+{\footnotesize\ttfamily \label{affichage_8c_a3fc4279fd17641c78ff108615503b9e2} 
+void afficher\+\_\+question (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_question}{Question}}}]{q}{}\end{DoxyParamCaption})}
+
+
+
+Affiche la question actuelle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & La question à afficher. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{affichage_8c_a3d86abb8eb253597fa942dc7d9c48d9c}\index{affichage.c@{affichage.c}!afficher\_reponses@{afficher\_reponses}}
+\index{afficher\_reponses@{afficher\_reponses}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{afficher\_reponses()}{afficher\_reponses()}}
+{\footnotesize\ttfamily \label{affichage_8c_a3d86abb8eb253597fa942dc7d9c48d9c} 
+void afficher\+\_\+reponses (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_question}{Question}}}]{q}{}\end{DoxyParamCaption})}
+
+
+
+Affiche les réponses possibles pour la question actuelle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & La question contenant les réponses à afficher. \\
+\hline
+\end{DoxyParams}

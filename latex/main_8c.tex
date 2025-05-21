@@ -1,0 +1,158 @@
+\doxysection{app/main.c File Reference}
+\hypertarget{main_8c}{}\label{main_8c}\index{app/main.c@{app/main.c}}
+
+
+Point d\textquotesingle{}entrée principal du programme.  
+
+
+{\ttfamily \#include "{}question.\+h"{}}\newline
+{\ttfamily \#include "{}affichage.\+h"{}}\newline
+{\ttfamily \#include "{}argent.\+h"{}}\newline
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{main_8c_ac870e865cf50ebb064bc55340a4d2e48}{etat\+\_\+t}} \{ \mbox{\hyperlink{main_8c_ac870e865cf50ebb064bc55340a4d2e48af173a366bc284d7e9610e21e740aecdb}{DEBUT}} = 0
+, \mbox{\hyperlink{main_8c_ac870e865cf50ebb064bc55340a4d2e48a783e3234087b5a238e8f4891f49bf312}{REGLES}}
+, \mbox{\hyperlink{main_8c_ac870e865cf50ebb064bc55340a4d2e48ad58838bb1d9efb9bd2361ba7a1bece91}{JEU}}
+, \mbox{\hyperlink{main_8c_ac870e865cf50ebb064bc55340a4d2e48aea3c073df31939c172972ef6ccbc988b}{FIN}}
+ \}
+\begin{DoxyCompactList}\small\item\em États du jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{main}} (void)
+\begin{DoxyCompactList}\small\item\em Fonction principale. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_ab3abca5b8f77da4e1d5ea8508c78e0b8}{machine\+\_\+etats}} ()
+\begin{DoxyCompactList}\small\item\em Machine à états du jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8c_ac870e865cf50ebb064bc55340a4d2e48}{etat\+\_\+t}} \mbox{\hyperlink{main_8c_a7bca59c3c2b51f714193130e106cf8ea}{etat}} = \mbox{\hyperlink{main_8c_ac870e865cf50ebb064bc55340a4d2e48af173a366bc284d7e9610e21e740aecdb}{DEBUT}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Point d\textquotesingle{}entrée principal du programme. 
+
+Ce fichier contient la fonction principale et la machine à états du jeu. Il gère les différents états du jeu \+: DEBUT, REGLES, JEU et FIN.
+
+\begin{DoxyAuthor}{Author}
+hugog 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+May 21, 2025 
+\end{DoxyDate}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{main_8c_ac870e865cf50ebb064bc55340a4d2e48}\index{main.c@{main.c}!etat\_t@{etat\_t}}
+\index{etat\_t@{etat\_t}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{etat\_t}{etat\_t}}
+{\footnotesize\ttfamily \label{main_8c_ac870e865cf50ebb064bc55340a4d2e48} 
+enum \mbox{\hyperlink{main_8c_ac870e865cf50ebb064bc55340a4d2e48}{etat\+\_\+t}}}
+
+
+
+États du jeu. 
+
+Cette énumération représente les différents états possibles du jeu. \begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEBUT@{DEBUT}!main.c@{main.c}}\index{main.c@{main.c}!DEBUT@{DEBUT}}}\Hypertarget{main_8c_ac870e865cf50ebb064bc55340a4d2e48af173a366bc284d7e9610e21e740aecdb}\label{main_8c_ac870e865cf50ebb064bc55340a4d2e48af173a366bc284d7e9610e21e740aecdb} 
+DEBUT&État initial du jeu. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{REGLES@{REGLES}!main.c@{main.c}}\index{main.c@{main.c}!REGLES@{REGLES}}}\Hypertarget{main_8c_ac870e865cf50ebb064bc55340a4d2e48a783e3234087b5a238e8f4891f49bf312}\label{main_8c_ac870e865cf50ebb064bc55340a4d2e48a783e3234087b5a238e8f4891f49bf312} 
+REGLES&État affichant les règles du jeu. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{JEU@{JEU}!main.c@{main.c}}\index{main.c@{main.c}!JEU@{JEU}}}\Hypertarget{main_8c_ac870e865cf50ebb064bc55340a4d2e48ad58838bb1d9efb9bd2361ba7a1bece91}\label{main_8c_ac870e865cf50ebb064bc55340a4d2e48ad58838bb1d9efb9bd2361ba7a1bece91} 
+JEU&État principal du jeu. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FIN@{FIN}!main.c@{main.c}}\index{main.c@{main.c}!FIN@{FIN}}}\Hypertarget{main_8c_ac870e865cf50ebb064bc55340a4d2e48aea3c073df31939c172972ef6ccbc988b}\label{main_8c_ac870e865cf50ebb064bc55340a4d2e48aea3c073df31939c172972ef6ccbc988b} 
+FIN&État de fin du jeu. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8c_ab3abca5b8f77da4e1d5ea8508c78e0b8}\index{main.c@{main.c}!machine\_etats@{machine\_etats}}
+\index{machine\_etats@{machine\_etats}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{machine\_etats()}{machine\_etats()}}
+{\footnotesize\ttfamily \label{main_8c_ab3abca5b8f77da4e1d5ea8508c78e0b8} 
+void machine\+\_\+etats (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Machine à états du jeu. 
+
+Gère les différents états du jeu \+: DEBUT, REGLES, JEU et FIN. Chaque état correspond à une étape spécifique du jeu. \texorpdfstring{$<$}{<} Réinitialiser le compteur de questions.
+
+\texorpdfstring{$<$}{<} Réinitialiser le numéro de la question.
+
+\texorpdfstring{$<$}{<} Afficher l\textquotesingle{}écran de début.
+
+\texorpdfstring{$<$}{<} Passer à l\textquotesingle{}état REGLES.
+
+\texorpdfstring{$<$}{<} Afficher l\textquotesingle{}écran des règles.
+
+\texorpdfstring{$<$}{<} Attendre 6 secondes.
+
+\texorpdfstring{$<$}{<} Passer à l\textquotesingle{}état JEU.
+
+\texorpdfstring{$<$}{<} Si aucune question n\textquotesingle{}est disponible.
+
+\texorpdfstring{$<$}{<} Afficher la question et le numéro.
+
+\texorpdfstring{$<$}{<} Gérer les boutons pour placer ou retirer de l\textquotesingle{}argent.
+
+\texorpdfstring{$<$}{<} Incrémenter le compteur de questions.
+
+\texorpdfstring{$<$}{<} Incrémenter le numéro de la question.
+
+\texorpdfstring{$<$}{<} Vérifier si 10 questions ont été posées.
+
+\texorpdfstring{$<$}{<} Afficher l\textquotesingle{}écran "{}\+PERDU"{}.
+
+\texorpdfstring{$<$}{<} Attendre 5 secondes avant de retourner à l\textquotesingle{}écran DEBUT.
+
+\texorpdfstring{$<$}{<} Retourner à l\textquotesingle{}état DEBUT.
+
+\texorpdfstring{$<$}{<} Afficher l\textquotesingle{}écran de fin classique.
+
+\texorpdfstring{$<$}{<} Attendre 5 secondes avant de retourner à l\textquotesingle{}écran DEBUT.
+
+\texorpdfstring{$<$}{<} Retourner à l\textquotesingle{}état DEBUT.\Hypertarget{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667} 
+void main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Fonction principale. 
+
+Initialise le système, configure les boutons et entre dans la boucle principale du jeu, qui appelle la machine à états. \texorpdfstring{$<$}{<} Initialisation de la bibliothèque HAL.
+
+\texorpdfstring{$<$}{<} Initialisation du générateur de nombres aléatoires.
+
+\texorpdfstring{$<$}{<} Bouton haut.
+
+\texorpdfstring{$<$}{<} Bouton droit.
+
+\texorpdfstring{$<$}{<} Bouton centre.
+
+\texorpdfstring{$<$}{<} Bouton gauche.
+
+\texorpdfstring{$<$}{<} Bouton bas.
+
+\texorpdfstring{$<$}{<} Appel de la machine à états.
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8c_a7bca59c3c2b51f714193130e106cf8ea}\index{main.c@{main.c}!etat@{etat}}
+\index{etat@{etat}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{etat}{etat}}
+{\footnotesize\ttfamily \label{main_8c_a7bca59c3c2b51f714193130e106cf8ea} 
+\mbox{\hyperlink{main_8c_ac870e865cf50ebb064bc55340a4d2e48}{etat\+\_\+t}} etat = \mbox{\hyperlink{main_8c_ac870e865cf50ebb064bc55340a4d2e48af173a366bc284d7e9610e21e740aecdb}{DEBUT}}}
+
+État actuel du jeu. 
