@@ -11,9 +11,9 @@
 #define ARGENT_H_
 
 // Variables pour la gestion de l'argent
-static int argent_place = 0;      // Somme d'argent actuellement placée sur les trappes
-static int argent_trappes[3] = {0, 0, 0}; // Argent sur chaque trappe
-static int argent_total = 150000; // Somme d'argent totale restante
+extern int argent_place;
+extern int argent_trappes[3];
+extern int argent_total;
 
 int tout_argent_place(void);
 void valider_reponses(Question q);

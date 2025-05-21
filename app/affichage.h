@@ -11,16 +11,6 @@
 #ifndef AFFICHAGE_H_
 #define AFFICHAGE_H_
 
-// États du jeu
-typedef enum {
-    DEBUT = 0,
-    REGLES,
-    JEU,
-    FIN
-} etat_t; // A METTRE AVEC LA MACHINE A ETATS !!!!!
-
-extern etat_t etat;
-
 void afficher_argent_total(void);
 void afficher_argent_trappes(void);
 void afficher_argent_restant(int argent_restant);

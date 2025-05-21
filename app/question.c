@@ -36,6 +36,10 @@ Question questions[25] = {
     {"Quel est le point de congelation de l'eau en degres C ?", {"0", "-1", "-5"}, 0},
 };
 
+bool questions_posees[20] = {false}; // Définition
+int compteur_questions = 0;
+int numero_question = 1;
+
 // Obtenir la prochaine question
 Question obtenir_question_suivante(void) {
     int questions_restantes = 0;

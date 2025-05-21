@@ -7,6 +7,11 @@
 
 #include "argent.h"
 
+
+int argent_place = 0;
+int argent_trappes[3] = {0, 0, 0};
+int argent_total = 150000;
+
 // Vérifier si tout l'argent est placé
 int tout_argent_place(void) {
     return argent_total == 0;

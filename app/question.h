@@ -21,9 +21,9 @@
 #ifndef QUESTION_H_
 #define QUESTION_H_
 
-static bool questions_posees[20] = {false}; // Tableau pour suivre les questions posées
-static int compteur_questions = 0; // Compteur pour suivre le nombre de questions posées
-static int numero_question = 1; // Numéro de la question actuelle
+extern bool questions_posees[20]; // Déclaration externe
+extern int compteur_questions;
+extern int numero_question;
 
 // Structure pour une question
 typedef struct {

@@ -2,6 +2,15 @@
 #include "affichage.h"
 #include "argent.h"
 
+
+// États du jeu
+typedef enum {
+    DEBUT = 0,
+    REGLES,
+    JEU,
+    FIN
+} etat_t;
+
 etat_t etat = DEBUT;
 
 // Fonction principale
