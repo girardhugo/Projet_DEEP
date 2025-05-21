@@ -19,6 +19,11 @@
  */
 etat_trappe_t etat_trappe = TRAPPE1;
 
+static uint8_t bouton_droit_prec = 1; /**< État précédent du bouton droit. */
+static uint8_t bouton_gauche_prec = 1; /**< État précédent du bouton gauche. */
+static uint8_t bouton_haut_prec = 1; /**< État précédent du bouton haut. */
+static uint8_t bouton_bas_prec = 1; /**< État précédent du bouton bas. */
+
 /**
  * @brief Gérer les boutons pour interagir avec les trappes.
  *
