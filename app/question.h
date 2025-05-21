@@ -35,4 +35,6 @@ typedef struct {
 // Liste des questions
 extern Question questions[25];
 
+Question obtenir_question_suivante(void);
+
 #endif /* QUESTION_H_ */

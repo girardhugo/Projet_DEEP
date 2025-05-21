@@ -6,6 +6,8 @@
  */
 
 #include "affichage.h"
+#include <stdio.h>
+#include "bouton.h"
 
 // Afficher l'argent total
 void afficher_argent_total(void) {
@@ -170,4 +172,26 @@ void afficher_ecran_regles(void) {
 	ILI9341_Puts(13, 170, "mauvaises trappes tombent !", &Font_11x18, ILI9341_COLOR_BLACK, ILI9341_COLOR_CYAN);
 	ILI9341_Puts(30, 200, "Conservez un maximum de", &Font_11x18, ILI9341_COLOR_BLACK, ILI9341_COLOR_CYAN);
 	ILI9341_Puts(110, 220, "billets !", &Font_11x18, ILI9341_COLOR_BLACK, ILI9341_COLOR_CYAN);
+}
+
+// Mettre à jour les couleurs des trappes
+void mettre_a_jour_couleurs_trappes() {
+	int largeur_trappe = 93; // Largeur de chaque trappe
+	int hauteur_trappe = 40; // Hauteur de chaque trappe
+	int espacement = 10;     // Espacement entre les trappes
+
+	for (int i = 0; i < 3; i++) {
+		// Calculer les positions des trappes
+		int x_debut = 10 + i * (largeur_trappe + espacement);
+		int x_fin = x_debut + largeur_trappe;
+		int y_debut = 90; // Position verticale des trappes
+		int y_fin = y_debut + hauteur_trappe;
+
+		// Déterminer la couleur de la trappe
+		uint16_t couleur_trappe = (etat_trappe == i) ? ILI9341_COLOR_BLACK : ILI9341_COLOR_WHITE;
+
+		// Dessiner la trappe
+		ILI9341_DrawFilledRectangle(x_debut, y_debut, x_fin, y_fin, couleur_trappe);
+	}
+    afficher_argent_trappes();
 }

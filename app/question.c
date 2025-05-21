@@ -5,7 +5,7 @@
  *      Author: hugog
  */
 
-# include "question.h"
+#include "question.h"
 
 // Liste des questions
 Question questions[25] = {
@@ -35,3 +35,32 @@ Question questions[25] = {
     {"Combien de cordes a un violon ?", {"6", "4", "5"}, 1},
     {"Quel est le point de congelation de l'eau en degres C ?", {"0", "-1", "-5"}, 0},
 };
+
+// Obtenir la prochaine question
+Question obtenir_question_suivante(void) {
+    int questions_restantes = 0;
+
+    // Vérifier combien de questions restent à poser
+    for (int i = 0; i < 25; i++) {
+        if (!questions_posees[i]) {
+            questions_restantes++;
+        }
+    }
+
+    // Si toutes les questions ont été posées, retourner une question vide
+    if (questions_restantes == 0) {
+        return (Question){"", {"", "", ""}, -1}; // Retourner une question vide
+    }
+
+    // Choisir une question au hasard parmi celles qui n'ont pas été posées
+    int index;
+    do {
+        index = rand() % 25; // Générer un index aléatoire entre 0 et 24
+    } while (questions_posees[index]);
+
+    // Marquer la question comme posée
+    questions_posees[index] = true;
+
+    // Retourner la question choisie
+    return questions[index];
+}
